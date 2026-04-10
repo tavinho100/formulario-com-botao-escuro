@@ -1,0 +1,61 @@
+<style>
+  .form-page { background: aliceblue; min-height: 500px; padding: 20px; font-family: arial, sans-serif; transition: background 0.3s; }
+  .form-page.inverted { background: #1a2a3a; }
+  .container { width: 100%; max-width: 660px; margin: 0 auto; background: #cfd3d6; padding: 40px; border-radius: 5px; position: relative; transition: background 0.3s; }
+  .form-page.inverted .container { background: #2c3e50; }
+  h1 { margin-bottom: 30px; color: var(--color-text-primary); transition: color 0.3s; }
+  .form-page.inverted h1 { color: #ecf0f1; }
+  .form-group { display: flex; align-items: center; margin-bottom: 20px; }
+  label { width: 200px; font-size: 18px; color: #222; transition: color 0.3s; }
+  .form-page.inverted label { color: #bdc3c7; }
+  input { flex: 1; padding: 10px; border: none; border-radius: 8px; background: #999; color: white; font-size: 16px; transition: background 0.3s; }
+  .form-page.inverted input { background: #34495e; color: #ecf0f1; }
+  input::placeholder { color: #ddd; }
+  .form-page.inverted input::placeholder { color: #7f8c8d; }
+  button.btn { padding: 15px 40px; margin-right: 20px; border: none; border-radius: 10px; background: #999; font-size: 16px; cursor: pointer; color: #fff; transition: background 0.3s; }
+  button.btn:hover { background: #777; }
+  .form-page.inverted button.btn { background: #34495e; color: #ecf0f1; }
+  .form-page.inverted button.btn:hover { background: #2c3e50; }
+  .toggle-btn { position: absolute; top: 16px; right: 16px; background: #555; color: white; border: none; border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: background 0.3s; }
+  .toggle-btn:hover { background: #333; }
+  .form-page.inverted .toggle-btn { background: #ecf0f1; color: #2c3e50; }
+  .form-page.inverted .toggle-btn:hover { background: #bdc3c7; }
+  .icon { font-size: 14px; }
+</style>
+
+<div class="form-page" id="page">
+  <div class="container">
+    <button class="toggle-btn" id="toggleBtn" onclick="toggleColors()">
+      <span class="icon">◑</span> inverter cores
+    </button>
+    <h1>HTML Form</h1>
+    <div class="form-group">
+      <label>primeiro nome</label>
+      <input type="text" placeholder="digite seu nome">
+    </div>
+    <div class="form-group">
+      <label>sobrenome</label>
+      <input type="text" placeholder="digite seu sobrenome">
+    </div>
+    <div class="form-group">
+      <label>email</label>
+      <input type="text" placeholder="digite seu email">
+    </div>
+    <div class="form-group">
+      <label>numero de telefone</label>
+      <input type="text" placeholder="digite seu numero">
+    </div>
+    <div class="form-group">
+      <label>data de nascimento</label>
+      <input type="date">
+    </div>
+    <button class="btn" type="submit">confirmar</button>
+    <button class="btn" type="reset">apagar</button>
+  </div>
+</div>
+
+<script>
+  function toggleColors() {
+    document.getElementById('page').classList.toggle('inverted');
+  }
+</script>
